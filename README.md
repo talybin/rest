@@ -145,6 +145,7 @@ options.set_headers = [](
 app.use(rest::static_files("html", std::move(options)));
 ```
 Available options
+
 | Option | Type | Description |
 | ------ | ---- | ----------- |
 | index | boost::string_view | Sends the specified directory index file. Set to empty to disable directory indexing. Default is `index.html`. |
