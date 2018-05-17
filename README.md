@@ -1,9 +1,9 @@
 ## REST
-Rest is a header only C\+\+11 library for building high performance RESTful web services. It is based on [Boost](https://www.boost.org) library to provide cross-platform compability and support for older compilers that does not support higher than C\+\+11.
+Rest is a header only C\+\+11 library for building high performance RESTful web services. It is based on [Boost](https://www.boost.org) library to provide cross-platform compatibility and support for older compilers that does not support higher than C\+\+11.
 
 ### Design Goals
-Unlike other similar libraries, Rest has it's main goal to have as close interface to [Node.js Express](https://expressjs.com) framework as possible with exception to avoid camel caps style.
-Also staying in C++11 makes it easier to integrate into corporate code where not always latest compilers can be used.
+Unlike other similar libraries, Rest has its main goal to have as close interface to [Node.js Express](https://expressjs.com) framework as possible with exception to avoid camel caps style.
+Also, staying in C++11 makes it easier to integrate into corporate code where not always the latest compilers can be used.
 
 ### Requirements
 Rest using Beast library (among others) from Boost. Beast was introduced in version 1.66 which makes it minimum required version of Boost.
@@ -28,6 +28,7 @@ int main() {
 
     app.listen(8080);
     ioc.run();
+}
 ```
 If your compiler support C++14 or later it is simpler to use `auto` keyword
 ```cpp
@@ -105,7 +106,7 @@ int main() {
 ```
 
 ### Parameter handler
-Parameter handler called whenever router matches named parameter in it's uri. A param callback will be called only once in a request-response cycle, even if the parameter is matched in multiple routes, as shown in the following example.
+Parameter handler called whenever router matches named parameter in its uri. A param callback will be called only once in a request-response cycle, even if the parameter is matched in multiple routes, as shown in the following example.
 ```cpp
 router.param("id", [](
     const rest::request&, rest::response&, rest::next& next,
@@ -149,7 +150,7 @@ Available options
 | Option | Type | Description |
 | ------ | ---- | ----------- |
 | index | boost::string_view | Sends the specified directory index file. Set to empty to disable directory indexing. Default is `index.html`. |
-| set_headers | std::function | Function for setting HTTP headers to serve with the file. By default sets Content-Type header with mime type resolved by file extension. |
+| set_headers | std::function | Function for setting HTTP headers to serve with the file. By default, sets Content-Type header with mime type resolved by file extension. |
 
 ### Mime types
 Mime type (or Content type) used to identify type of HTTP payload (ex. embedded file). Rest library has a predefined list of most common types. This list is fully modifiable. 
@@ -235,7 +236,7 @@ int main() {
 * Add missing methods and functionality of Express library
 * Add support for web sockets
 * Add support for SSL/TSL
-* Orginize and complete documentation
+* Organize and complete documentation
 * Add unit tests
 
 ### Contributing
