@@ -239,6 +239,3 @@ int main() {
 * Organize and complete documentation
 * Add unit tests
 
-### Contributing
-The code is not perfect and there a lot of TODOs. Any pull requests are welcome.
-
